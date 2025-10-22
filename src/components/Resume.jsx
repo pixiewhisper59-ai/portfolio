@@ -1,17 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaDownload } from "react-icons/fa";
 
 const Resume = () => {
-const handleDownload = () => {
-  const link = document.createElement("a");
-  link.href = "/AhmedRaza_Resume.pdf"; // served from public/
-  link.download = "AhmedRaza_Resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
@@ -38,15 +28,6 @@ const handleDownload = () => {
             </h1>
             <p className="text-gray-300 mt-1">Full Stack Web Developer</p>
           </div>
-          <motion.button
-            onClick={handleDownload}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(168,85,247,0.6)" }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-6 md:mt-0 flex items-center gap-2 bg-purple-600/40 hover:bg-purple-700/60 text-white px-5 py-2 rounded-xl backdrop-blur-md transition-all duration-300 border border-purple-400/40"
-          >
-            <FaDownload />
-            Download PDF
-          </motion.button>
         </motion.div>
 
         {/* Contact Info */}
