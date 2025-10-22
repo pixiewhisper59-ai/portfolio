@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Code2, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       className="
@@ -72,6 +75,7 @@ const Home = () => {
         className="flex flex-col sm:flex-row gap-4 sm:gap-6"
       >
         <button
+          onClick={() => navigate("/projects")}
           className="
             group bg-gradient-to-r from-violet-500 to-fuchsia-600
             text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold
@@ -86,6 +90,7 @@ const Home = () => {
         </button>
 
         <button
+          onClick={() => navigate("/contact")}
           className="
             flex items-center justify-center gap-2
             border border-violet-400/50 text-violet-300
